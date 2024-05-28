@@ -21,7 +21,7 @@ async function Home() {
   return (
     <div className="grid md:grid-cols-3   sm:grid-cols-2 sm:px-5 grid-cols justify-center gap-5 ">
       {data.products.map((product: Product) => (
-          <Link href={`/product/${product.id}`}>
+          <Link key={product.id} href={`/product/${product.id}`}>
           <div
             className="card"
             style={{
